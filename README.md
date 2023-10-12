@@ -8,6 +8,20 @@ Using the [Arduino framework for ESP32](https://github.com/espressif/arduino-esp
 
 <br>
 
+**Known Bugs:**
+
+Sometimes, especially during the first run, you can get an error related to "component manager." To fix it, I usually just need to run this command on a PlatformIO command line:
+
+`pip install -U --force-reinstall "idf-component-manager"`
+
+However, sometimes even the command gives some kind of permissions error. In such cases, simply running the command again usually works.
+
+If things are still not compiling, another workaround is to delete the "packages" and "platforms" folders from the ".platformio" directory, or at least the folders related to ESP32 and Arduino, and the ".pio" and ".vscode" folders on the project root.
+
+Restarting Visual Studio Code every time, of course
+
+<br>
+
 **Tested Environment:**
 
 This project has been tested on VSCode running on Windows 11.
